@@ -1603,19 +1603,18 @@ client.on('message', message => {
  
   if (message.content.startsWith(admin + 'wt')) {
   client.user.setActivity(argresult, {type:'WATCHING'});
-      message.channel.send(` ☑ Client Activity Now Is : \`Watching ${argresult} \` `)
   } else 
   if (message.content.startsWith(admin + 'ls')) {
   client.user.setActivity(argresult , {type:'LISTENING'});
-      message.channel.send(` ☑ Client Activity Now Is : \`Listening ${argresult} \` `)
   } else 
   if (message.content.startsWith(admin + 'setstream')) {
     client.user.setActivity(argresult, "Streaming");
-     message.channel.send(` ☑ Client Activity Now Is : \`Streaming ${argresult} \` `)
   } else
-  if (message.content.startsWith(admin + 'pl')) {
-    client.user.setActivity(argresult, {type:'PLAYING'});
-     message.channel.send(` ☑ Client Activity Now Is : \`playing ${argresult} \` `)
+  if (message.content.startsWith(admin + 'p')) {
+    client.user.setActivity(argresult, {type:'LISTENING'});
+  } else
+  if (message.content.startsWith(admin + 'ش')) {
+    client.user.setActivity(argresult, {type:'LISTENING'});
   }
 });
 
@@ -1646,5 +1645,5 @@ client.on('message', message => {
 
 
 
-client.login('OTkxNzY4OTA1OTg5MjMwNjMz.GkoPB_.GfCMNXSTywCKxzBLh-MmHFaGpHgcTdiUfB2S8k');
+client.login(process.env.token);
 
